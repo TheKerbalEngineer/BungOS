@@ -4,6 +4,8 @@
 #include "fat.h"
 #include "keyboard.h"
 
+#define getchar __asm mov a, al;
+
 void far* g_data = (void far*)0x00500200;
 
 void _cdecl cstart_(uint16_t bootDrive)
@@ -69,7 +71,8 @@ void _cdecl cstart_(uint16_t bootDrive)
 
     printf("\r\nPress Any Key...\r\n");
     getch();
-    printf("Entering Type Mode...\r\n");
+    printf("Entering Typing Mode...\r\n");
+    printf("Use ESC to Exit\r\n");
     uint8_t a;
     getch();
     x86_clear();
