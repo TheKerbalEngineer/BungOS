@@ -57,7 +57,7 @@ void _cdecl cstart_(uint16_t bootDrive)
     printf("\r\nWelcome to\r\n");
     char buffer[100];
     uint32_t read;
-    fd = FAT_Open(&disk, "USR/LOGO.TXT");
+    fd = FAT_Open(&disk, "USR/TEST.TXT");
     while ((read = FAT_Read(&disk, fd, sizeof(buffer), buffer)))
     {
         for (uint32_t i = 0; i < read; i++)
@@ -91,11 +91,11 @@ void _cdecl cstart_(uint16_t bootDrive)
     }
 
     x86_clear();
-    __asm mov a, al;
+    getchar
     printf("User: ");
     while (a != 13) { // Add Username Buffer!
 	    getch();
-	    __asm mov a, al;
+	    getchar
         if (a == 8) {
             printf("%c", 8);
             printf(" ");
@@ -106,11 +106,11 @@ void _cdecl cstart_(uint16_t bootDrive)
     }
     printf("\r\n");
 
-    __asm mov a, al;
+    getchar
     printf("Password: ");
     while (a != 13) { // Add Password Buffer!
 	    getch();
-	    __asm mov a, al;
+	    getchar
         if (a == 8) {
             printf("%c", 8);
             printf(" ");
