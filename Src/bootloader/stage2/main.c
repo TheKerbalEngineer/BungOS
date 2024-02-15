@@ -69,6 +69,7 @@ void _cdecl cstart_(uint16_t bootDrive)
     }
     FAT_Close(fd);
 
+/*
     printf("\r\nPress Any Key...\r\n");
     getch();
     printf("Entering Typing Mode...\r\n");
@@ -121,6 +122,7 @@ void _cdecl cstart_(uint16_t bootDrive)
     }
     printf("\r\n");
     printf("Acoount Logged");
+*/
 
 end:
     for (;;);
