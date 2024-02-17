@@ -24,7 +24,6 @@ $(BUILD_DIR)/main_floppy.img: bootloader kernel
 	mcopy -i $(BUILD_DIR)/main_floppy.img $(BUILD_DIR)/stage2.bin "::stage2.bin"
 	mcopy -i $(BUILD_DIR)/main_floppy.img $(BUILD_DIR)/kernel.bin "::kernel.bin"
 	mcopy -i $(BUILD_DIR)/main_floppy.img $(FILES_DIR)/test.txt "::test.txt"
-	mcopy -i $(BUILD_DIR)/main_floppy.img $(FILES_DIR)/nsa.bin "::nsa.bin"
 	mmd -i $(BUILD_DIR)/main_floppy.img "::usr"
 	mcopy -i $(BUILD_DIR)/main_floppy.img $(FILES_DIR)/logo.txt   "::usr/logo.txt"
 	mcopy -i $(BUILD_DIR)/main_floppy.img $(FILES_DIR)/test.txt   "::usr/test.txt"
