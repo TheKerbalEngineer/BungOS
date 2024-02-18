@@ -1,0 +1,5 @@
+main.c(97): Error! E1011: Symbol 'a' has not been declared
+main.c(101): Error! E1011: Symbol 'a' has not been declared
+main.c(103): Error! E1156: Assembler error: 'Operands must be the same size'
+main.c(117): Error! E1156: Assembler error: 'Operands must be the same size'
+main.c(122): Error! E1156: Assembler error: 'Operands must be the same size'
