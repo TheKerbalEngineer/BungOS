@@ -74,7 +74,7 @@ void _cdecl cstart_(uint16_t bootDrive)
     printf("\r\nPress Any Key...\r\n");
     getch();
     printf("Entering Typing Mode...\r\n");
-    printf("Use ESC to Exit\r\n");
+    printf("Use ` to Exit\r\n");
     uint8_t a;
     getch();
     x86_clear();
@@ -126,7 +126,7 @@ void _cdecl cstart_(uint16_t bootDrive)
         }
     }
     printf("\r\n");
-    printf("Acoount Logged");
+    printf("Login Error: No Login Saved");
     
 end:
     for (;;);
