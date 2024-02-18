@@ -1,5 +1,6 @@
 #include "stdint.h"
 #include "stdio.h"
+#include "string.h"
 #include "disk.h"
 #include "fat.h"
 #include "keyboard.h"
@@ -91,9 +92,11 @@ void _cdecl cstart_(uint16_t bootDrive)
         }
     }
 
+*/
     x86_clear();
     getchar
     printf("User: ");
+    char user[25] = "";
     while (a != 13) { // Add Username Buffer!
 	    getch();
 	    getchar
@@ -102,10 +105,11 @@ void _cdecl cstart_(uint16_t bootDrive)
             printf(" ");
             printf("%c", 8);
         } else {
-	    printf("%c", a);
+	        printf("%c", a);
+            strcat(user, &a);
         }
     }
-    printf("\r\n");
+    printf("\r\n %c \r\n");
 
     getchar
     printf("Password: ");
@@ -122,8 +126,6 @@ void _cdecl cstart_(uint16_t bootDrive)
     }
     printf("\r\n");
     printf("Acoount Logged");
-*/
-
 end:
     for (;;);
 }
