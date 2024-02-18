@@ -1,0 +1,21 @@
+memory.h(4): Error! E1024: Declared symbol 'memcpy' is not in parameter list
+memory.h(5): Error! E1024: Declared symbol 'memset' is not in parameter list
+memory.h(6): Error! E1024: Declared symbol 'memcmp' is not in parameter list
+ctype.h(4): Error! E1024: Declared symbol 'islower' is not in parameter list
+ctype.h(5): Error! E1024: Declared symbol 'toupper' is not in parameter list
+fat.c(43): Error! E1023: Storage class of parameter must be register or unspecified
+fat.c(43): Error! E1024: Declared symbol 'FAT_BootSector' is not in parameter list
+fat.c(57): Error! E1023: Storage class of parameter must be register or unspecified
+fat.c(57): Error! E1024: Declared symbol 'FAT_FileData' is not in parameter list
+fat.c(63): Error! E1022: Missing or misspelled data type near 'FAT_BootSector'
+fat.c(67): Error! E1022: Missing or misspelled data type near 'FAT_FileData'
+fat.c(69): Error! E1022: Missing or misspelled data type near 'FAT_FileData'
+fat.c(71): Error! E1023: Storage class of parameter must be register or unspecified
+fat.c(71): Error! E1024: Declared symbol 'FAT_Data' is not in parameter list
+fat.c(73): Error! E1023: Storage class of parameter must be register or unspecified
+fat.c(73): Error! E1024: Declared symbol 'FAT_Data' is not in parameter list
+fat.c(73): Error! E1009: Expecting ',' but found '__far'
+fat.c(73): Error! E1024: Declared symbol 'g_Data' is not in parameter list
+fat.c(74): Error! E1023: Storage class of parameter must be register or unspecified
+fat.c(74): Error! E1024: Declared symbol 'g_Fat' is not in parameter list
+fat.c(74): Error! E1147: Too many errors: compilation aborted
