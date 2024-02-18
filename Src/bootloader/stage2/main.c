@@ -109,7 +109,7 @@ void _cdecl cstart_(uint16_t bootDrive)
             strcat(user, &a);
         }
     }
-    printf("\r\n %c \r\n");
+    printf("\r\n %c \r\n", user);
 
     getchar
     printf("Password: ");
