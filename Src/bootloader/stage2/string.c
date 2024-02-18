@@ -53,7 +53,6 @@ unsigned strlen(const char* str)
     return len;
 }
 
-/*
 char *strcat(char *dest, const char *src)
 {
     size_t i,j;
@@ -64,4 +63,3 @@ char *strcat(char *dest, const char *src)
     dest[i+j] = '\0';
     return dest;
 }
-*/
