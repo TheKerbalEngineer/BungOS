@@ -2,12 +2,6 @@
 
 Made for watermelon_sir's bungus contest, and forked from a private project
 
-## Building
-
-Download and install watcom c, and modify makefiles to your install dir
-
-Run make and fix errors until it works
-
 ## Running
 
 ### Debian Linux / Debian WSL
