@@ -55,7 +55,7 @@ unsigned strlen(const char* str)
 
 char *strcat(char *dest, const char *src)
 {
-    size_t i,j;
+    unsigned int i,j;
     for (i = 0; dest[i] != '\0'; i++)
         ;
     for (j = 0; src[j] != '\0'; j++)
