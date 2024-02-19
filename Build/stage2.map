@@ -1,9 +1,10 @@
 Open Watcom Linker Version 2.0 beta Dec 24 2023 01:52:14 (64-bit)
 Copyright (c) 2002-2023 The Open Watcom Contributors. All Rights Reserved.
 Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
-Created on:       24/02/17 23:42:46
+Created on:       24/02/19 08:27:59
 Executable Image: /home/kiwijt/BungOS/Build/stage2.bin
 creating a RAW Binary Image executable
+Error! E2028: stpcpy_ is an undefined reference
 
 
                         +------------+
@@ -13,7 +14,7 @@ creating a RAW Binary Image executable
 Group                           Address              Size
 =====                           =======              ====
 
-DGROUP                          00001ca8             00000214
+DGROUP                          00001cea             0000022e
 
 
 
@@ -25,11 +26,11 @@ Segment                Class          Group          Address         Size
 =======                =====          =====          =======         ====
 
 _ENTRY                 CODE           AUTO           00000000        00000013
-_TEXT                  CODE           AUTO           00000013        00001c94
-CONST                  DATA           DGROUP         00001ca8        000001f1
-CONST2                 DATA           DGROUP         00001e9a        00000011
-_DATA                  DATA           DGROUP         00001eac        00000008
-_BSS                   BSS            DGROUP         00001eb4        00000008
+_TEXT                  CODE           AUTO           00000013        00001cd7
+CONST                  DATA           DGROUP         00001cea        000001f1
+CONST2                 DATA           DGROUP         00001edc        00000011
+_DATA                  DATA           DGROUP         00001eee        00000021
+_BSS                   BSS            DGROUP         00001f10        00000008
 
 
                         +----------------+
@@ -76,25 +77,26 @@ Module: /home/kiwijt/BungOS/Build/stage2/c/fat.obj(/home/kiwijt/BungOS/Src/bootl
 00000e54       FAT_Open_
 Module: /home/kiwijt/BungOS/Build/stage2/c/main.obj(/home/kiwijt/BungOS/Src/bootloader/stage2/main.c)
 00000fce       _cstart_
-00001eb0+      _g_data
+00001ef2+      _g_data
 Module: /home/kiwijt/BungOS/Build/stage2/c/memory.obj(/home/kiwijt/BungOS/Src/bootloader/stage2/memory.c)
-000013aa       memcpy_
-0000141e       memset_
-0000147d       memcmp_
+000013ba       memcpy_
+0000142e       memset_
+0000148d       memcmp_
 Module: /home/kiwijt/BungOS/Build/stage2/c/stdio.obj(/home/kiwijt/BungOS/Src/bootloader/stage2/stdio.c)
-000014f6       putc_
-0000151d+      puts_
-00001554+      puts_f_
-00001591       _printf
-00001814+      printf_number_
-00001a88+      print_buffer_
-00001e9a+      _g_HexChars
+00001506       putc_
+0000152d+      puts_
+00001564+      puts_f_
+000015a1       _printf
+00001824+      printf_number_
+00001a98+      print_buffer_
+00001edc+      _g_HexChars
 Module: /home/kiwijt/BungOS/Build/stage2/c/string.obj(/home/kiwijt/BungOS/Src/bootloader/stage2/string.c)
-00001b04       strchr_
-00001b5f+      strcpy_
-00001bd3       strlen_
+00001b14       strchr_
+00001b6f+      strcpy_
+00001be3       strlen_
+00001c1e+      strcat_
 Module: /home/kiwijt/BungOS/Build/stage2/c/utility.obj(/home/kiwijt/BungOS/Src/bootloader/stage2/utility.c)
-00001c0e+      align_
+00001c51+      align_
 
 
                         +---------------------+
@@ -112,53 +114,53 @@ main.asm        _ENTRY                CODE           00000000         00000013
 x86.asm         _TEXT                 CODE           00000021         00000112
 /home/kiwijt/BungOS/Src/bootloader/stage2/ctype.c
                 _TEXT                 CODE           00000133         00000086
-                CONST                 DATA           00001ca8         00000000
-                CONST2                DATA           00001e9a         00000000
-                _DATA                 DATA           00001eac         00000000
+                CONST                 DATA           00001cea         00000000
+                CONST2                DATA           00001edc         00000000
+                _DATA                 DATA           00001eee         00000000
 /home/kiwijt/BungOS/Src/bootloader/stage2/disk.c
                 _TEXT                 CODE           000001b9         000001c6
-                CONST                 DATA           00001ca8         00000000
-                CONST2                DATA           00001e9a         00000000
-                _DATA                 DATA           00001eac         00000000
+                CONST                 DATA           00001cea         00000000
+                CONST2                DATA           00001edc         00000000
+                _DATA                 DATA           00001eee         00000000
 /home/kiwijt/BungOS/Src/bootloader/stage2/fat.c
                 _TEXT                 CODE           0000037f         00000c4f
-                CONST                 DATA           00001ca8         00000107
-                CONST2                DATA           00001e9a         00000000
-                _DATA                 DATA           00001eac         00000004
-                _BSS                  BSS            00001eb4         00000008
+                CONST                 DATA           00001cea         00000107
+                CONST2                DATA           00001edc         00000000
+                _DATA                 DATA           00001eee         00000004
+                _BSS                  BSS            00001f10         00000008
 /home/kiwijt/BungOS/Src/bootloader/stage2/main.c
-                _TEXT                 CODE           00000fce         000003dc
-                CONST                 DATA           00001db0         000000e5
-                CONST2                DATA           00001e9a         00000000
-                _DATA                 DATA           00001eb0         00000004
+                _TEXT                 CODE           00000fce         000003ec
+                CONST                 DATA           00001df2         000000e5
+                CONST2                DATA           00001edc         00000000
+                _DATA                 DATA           00001ef2         0000001d
 /home/kiwijt/BungOS/Src/bootloader/stage2/memory.c
-                _TEXT                 CODE           000013aa         0000014c
-                CONST                 DATA           00001e96         00000000
-                CONST2                DATA           00001e9a         00000000
-                _DATA                 DATA           00001eb4         00000000
+                _TEXT                 CODE           000013ba         0000014c
+                CONST                 DATA           00001ed8         00000000
+                CONST2                DATA           00001edc         00000000
+                _DATA                 DATA           00001f10         00000000
 /home/kiwijt/BungOS/Src/bootloader/stage2/stdio.c
-                _TEXT                 CODE           000014f6         0000060e
-                CONST                 DATA           00001e96         00000003
-                CONST2                DATA           00001e9a         00000011
-                _DATA                 DATA           00001eb4         00000000
+                _TEXT                 CODE           00001506         0000060e
+                CONST                 DATA           00001ed8         00000003
+                CONST2                DATA           00001edc         00000011
+                _DATA                 DATA           00001f10         00000000
 /home/kiwijt/BungOS/Src/bootloader/stage2/string.c
-                _TEXT                 CODE           00001b04         0000010a
-                CONST                 DATA           00001e9a         00000000
-                CONST2                DATA           00001eac         00000000
-                _DATA                 DATA           00001eb4         00000000
+                _TEXT                 CODE           00001b14         0000013d
+                CONST                 DATA           00001edc         00000000
+                CONST2                DATA           00001eee         00000000
+                _DATA                 DATA           00001f10         00000000
 /home/kiwijt/BungOS/Src/bootloader/stage2/utility.c
-                _TEXT                 CODE           00001c0e         00000099
-                CONST                 DATA           00001e9a         00000000
-                CONST2                DATA           00001eac         00000000
-                _DATA                 DATA           00001eb4         00000000
+                _TEXT                 CODE           00001c51         00000099
+                CONST                 DATA           00001edc         00000000
+                CONST2                DATA           00001eee         00000000
+                _DATA                 DATA           00001f10         00000000
 Warning! W1014: stack segment not found
 
 
-                        +-----------------------+
-                        |   Linker Statistics   |
-                        +-----------------------+
+                        +---------------------------+
+                        |   Unresolved References   |
+                        +---------------------------+
 
-Stack size:  0200 (512.)
-Memory size:  1ebc (7868.)
-Entry point address: 00000000
-Link time: 00:00.00
+Undefined Symbol                Referenced by
+================                =============
+
+stpcpy_                         /home/kiwijt/BungOS/Build/stage2/c/string.obj(/home/kiwijt/BungOS/Src/bootloader/stage2/string.c)
