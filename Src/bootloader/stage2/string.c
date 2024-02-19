@@ -53,7 +53,7 @@ unsigned strlen(const char* str)
 
     return len;
 }
-/*
+
 stpcpy(char *restrict dst, const char *restrict src)
 {
     char  *p;
@@ -61,10 +61,11 @@ stpcpy(char *restrict dst, const char *restrict src)
     *p = '\0';
     return p;
 }
-*/
 
+/*
 char* strcat(char *restrict dst, const char *restrict src)
 {
     stpcpy(dst + strlen(dst), src);
     return dst;
 }
+*/
