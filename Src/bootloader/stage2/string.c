@@ -1,5 +1,6 @@
 #include "string.h"
 #include "stdint.h"
+#include "memory.h"
 
 const char* strchr(const char* str, char chr)
 {
@@ -52,9 +53,18 @@ unsigned strlen(const char* str)
 
     return len;
 }
+/*
+stpcpy(char *restrict dst, const char *restrict src)
+{
+    char  *p;
+    p = memcpy(dst, src, strlen(src));
+    *p = '\0';
+    return p;
+}
+*/
 
 char* strcat(char *restrict dst, const char *restrict src)
 {
-    strcpy(dst + strlen(dst), src);
+    stpcpy(dst + strlen(dst), src);
     return dst;
 }
