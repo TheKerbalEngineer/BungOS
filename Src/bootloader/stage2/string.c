@@ -53,10 +53,9 @@ unsigned strlen(const char* str)
     return len;
 }
 
-/*
 char *strcat(char *dest, const char *src)
 {
-    unsigned int i,j;
+    long int i,j;
     for (i = 0; dest[i] != '\0'; i++)
         ;
     for (j = 0; src[j] != '\0'; j++)
@@ -64,4 +63,3 @@ char *strcat(char *dest, const char *src)
     dest[i+j] = '\0';
     return dest;
 }
-*/

@@ -96,8 +96,8 @@ void _cdecl cstart_(uint16_t bootDrive)
     x86_clear();
     getchar
     printf("User: ");
-    //char user[25] = "";
-    while (a != 13) { // Add Username Buffer!
+    char user[25] = "";
+    while (a != 13) {
 	    getch();
 	    getchar
         if (a == 8) {
