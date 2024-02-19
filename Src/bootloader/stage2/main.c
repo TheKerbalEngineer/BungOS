@@ -71,7 +71,7 @@ void _cdecl cstart_(uint16_t bootDrive)
     FAT_Close(fd);
 
 
-    printf("\r\nPress Any Key...\r\n");
+    printf("V0.1\r\nPress Any Key...\r\n");
     getch();
     printf("Entering Typing Mode...\r\n");
     printf("Use ` to Exit\r\n");
