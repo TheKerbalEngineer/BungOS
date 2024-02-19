@@ -1,0 +1,3 @@
+string.c(60): Warning! W112: Pointer truncated
+string.c(60): Note! I2003: source conversion type is 'void __far *'
+string.c(60): Note! I2004: target conversion type is 'char *'

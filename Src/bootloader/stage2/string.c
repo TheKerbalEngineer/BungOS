@@ -54,7 +54,7 @@ unsigned strlen(const char* str)
     return len;
 }
 
-stpcpy(char *restrict dst, const char *restrict src)
+char *stpcpy(char *restrict dst, const char *restrict src)
 {
     char  *p;
     p = memcpy(dst, src, strlen(src));
