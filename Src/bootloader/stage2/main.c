@@ -71,7 +71,7 @@ void _cdecl cstart_(uint16_t bootDrive)
     FAT_Close(fd);
 
 
-    printf("V0.1\r\nPress Any Key...\r\n");
+    printf("V0.1.1\r\nPress Any Key...\r\n");
     getch();
     printf("Entering Typing Mode...\r\n");
     printf("Use ` to Exit\r\n");
@@ -106,11 +106,11 @@ void _cdecl cstart_(uint16_t bootDrive)
             printf("%c", 8);
         } else {
 	        printf("%c", a);
-            //strcat(user, &a);
+            strcat(user, (char) &a);
         }
     }
     printf("\r\n");
-    //printf("\r\n %c \r\n", user);
+    printf("\r\n %c \r\n", user);
 
     getchar
     printf("Password: ");
@@ -127,6 +127,15 @@ void _cdecl cstart_(uint16_t bootDrive)
     }
     printf("\r\n");
     printf("Login Error: No Login Saved");
+    getch();
+
+    x86_clear();
+    char test_src[12] = "Hello ";
+    char test_dst[12] = "World!";
+    printf("Start: %c, End: %c \r\n", test_src, test_dst);
+    strcat(test_dst, test_src);
+    printf("%c", test_dst);
+
     
 end:
     for (;;);

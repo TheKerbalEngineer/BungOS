@@ -64,6 +64,6 @@ char *stpcpy(char *restrict dst, const char *restrict src)
 
 char *strcat(char *restrict dst, const char *restrict src)
 {
-    stpcpy(dst + strlen(dst), src);
+    strcpy(dst + strlen(dst), src);
     return dst;
 }
