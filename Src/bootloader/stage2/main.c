@@ -106,11 +106,11 @@ void _cdecl cstart_(uint16_t bootDrive)
             printf("%c", 8);
         } else {
 	        printf("%c", a);
-            strcat(user, (char) &a);
+            //strcat(user, (char) &a);
         }
     }
     printf("\r\n");
-    printf("\r\n %c \r\n", user);
+    //printf("\r\n %c \r\n", user);
 
     getchar
     printf("Password: ");
@@ -130,7 +130,7 @@ void _cdecl cstart_(uint16_t bootDrive)
     getch();
 
     x86_clear();
-    printf("github.com/TheKerbalEngineer/BungOS");
+    //printf("github.com/TheKerbalEngineer/BungOS");
     
 
 end:
