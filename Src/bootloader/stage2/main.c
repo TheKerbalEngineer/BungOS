@@ -4,6 +4,7 @@
 #include "disk.h"
 #include "fat.h"
 #include "keyboard.h"
+#include "sound.h"
 
 #define getchar __asm mov a, al;
 
@@ -131,7 +132,10 @@ void _cdecl cstart_(uint16_t bootDrive)
 
     x86_clear();
     //printf("github.com/TheKerbalEngineer/BungOS");
-    
+    ////printf("Press for beep\r\n");
+    ////getch();
+    ////beep();
+    ////printf("Beep\r\n");
 
 end:
     for (;;);

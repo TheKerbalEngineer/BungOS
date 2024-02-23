@@ -1,4 +1,2 @@
-main.c(112): Warning! W102: Parameter 2: Type mismatch (warning)
-main.c(112): Note! I2003: source conversion type is 'char'
-main.c(112): Note! I2004: target conversion type is 'char const *'
-main.c(112): Note! I2002: 'strcat' defined in: string.h(7)
+main.c(79): Warning! W200: 'a' has been referenced but never assigned a value
+main.c(102): Warning! W202: Symbol 'user' has been defined, but not referenced
