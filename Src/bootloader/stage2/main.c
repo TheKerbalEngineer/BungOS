@@ -71,6 +71,22 @@ void _cdecl cstart_(uint16_t bootDrive)
     }
     FAT_Close(fd);
 
+    //printf("Menu");
+    //getch();
+    //printf("1. Type\r\n2. Login\r\n3. Files\r\n4. Test Page");
+    
+    //uint8_t b;
+    //getch();
+    //__asm mov b, al;
+    //if (b == 49) {
+    //    type();
+    //} else if (b == 50) {
+    //    
+    //} else if (b == 51) {
+
+    //} else if (b == 52){
+
+    //}
 
     printf("V0.1.1\r\nPress Any Key...\r\n");
     getch();
@@ -92,7 +108,6 @@ void _cdecl cstart_(uint16_t bootDrive)
             printf("%c", a);
         }
     }
-
 
     x86_clear();
     getchar
@@ -140,3 +155,27 @@ void _cdecl cstart_(uint16_t bootDrive)
 end:
     for (;;);
 }
+
+//void type(void) {
+//    printf("Press Any Key...\r\n");
+//    getch();
+//    printf("Entering Typing Mode...\r\n");
+//    printf("Use ` to Exit\r\n");
+//    uint8_t a;
+//    getch();
+//    x86_clear();
+//    while (a != '`') {
+//	    getch();
+//	    __asm mov a, al; // Get Keyboard Char
+//        if (a == 13) {
+//            printf("\r\n");
+//        } else if (a == 8){
+//            printf("%c", 8);
+//            printf(" ");
+//            printf("%c", 8);
+//        } else {
+//            printf("%d", a);
+//        }
+//    }
+//    return 0;
+//}

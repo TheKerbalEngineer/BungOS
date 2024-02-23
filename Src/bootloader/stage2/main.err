@@ -1,2 +1,10 @@
-main.c(79): Warning! W200: 'a' has been referenced but never assigned a value
-main.c(102): Warning! W202: Symbol 'user' has been defined, but not referenced
+main.c(83): Warning! W131: No prototype found for function 'type'
+main.c(78): Warning! W200: 'b' has been referenced but never assigned a value
+main.c(96): Warning! W200: 'a' has been referenced but never assigned a value
+main.c(117): Warning! W202: Symbol 'user' has been defined, but not referenced
+main.c(186): Error! E1051: Not expecting a return value for function 'type'
+main.c(186): Error! E1010: Type mismatch
+main.c(186): Note! I2003: source conversion type is 'int'
+main.c(186): Note! I2004: target conversion type is 'void'
+main.c(187): Warning! W138: No newline at end of file
+main.c(169): Warning! W200: 'a' has been referenced but never assigned a value
