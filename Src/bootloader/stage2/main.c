@@ -130,13 +130,9 @@ void _cdecl cstart_(uint16_t bootDrive)
     getch();
 
     x86_clear();
-    char test_src[12] = "Hello ";
-    char test_dst[12] = "World!";
-    printf("Start: %c, End: %c \r\n", test_src, test_dst);
-    strcat(test_dst, test_src);
-    printf("%c", test_dst);
-
+    printf("github.com/TheKerbalEngineer/BungOS");
     
+
 end:
     for (;;);
 }
